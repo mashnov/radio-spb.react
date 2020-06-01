@@ -1,0 +1,64 @@
+.wrapper {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    height: 40px;
+    border-radius: 30px/50px;
+    background: rgba(0,0,0,0.4);
+    box-shadow: inset 0 0 10px 2px #000, 0 0 2px 1px rgba(255,255,255,0.2);
+    overflow: hidden;
+}
+
+.itemWrapper {
+    position: relative;
+    display: block;
+    height: 32px;
+    white-space: nowrap;
+    transform: translateY(4px);
+    transition: transform 0.25s;
+}
+
+.itemBackText,
+.itemFrontText,
+.itemButton {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 70px;
+}
+
+.itemBackText,
+.itemFrontText {
+    color:#e7e7e7;
+    font-size: 19px;
+    line-height: 32px;
+    transition: color 0.7s, text-shadow 0.9s;
+}
+
+.itemButton {
+    width: 23px;
+    height: 32px;
+    border-radius: 40px/50px;
+    background: #e7e7e7;
+    box-shadow: inset 0 0 5px 1px #9e9e9e;
+    transition: transform 0.15s;
+    cursor: pointer;
+}
+
+.on .itemWrapper {
+    transform: translateX(3px) translateY(4px);
+}
+
+.off .itemWrapper {
+    transform: translateX(-66px) translateY(4px);
+}
+
+.on .itemButton:active {
+    transform: translateX(-1px) scaleX(1.05);
+}
+
+.off .itemButton:active {
+    transform: translateX(1px) scaleX(1.05);
+}
